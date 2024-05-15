@@ -1,9 +1,16 @@
-import './App.css'
+import './App.css';
+import StarshipCard from './components/StarshipCard';
+import StarshipList from './components/StarshipList';
+import StarshipSearch from './components/StarshipSearch';
 
 const App = () => {
 
   return (
-    <h1>Hello world!</h1>
+    <div>
+      <StarshipSearch />
+      <StarshipList />
+      <StarshipCard />
+    </div>
   );
 }
 
