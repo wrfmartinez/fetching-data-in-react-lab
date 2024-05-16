@@ -1,7 +1,8 @@
 import './App.css';
-import StarshipCard from './components/StarshipCard';
-import StarshipList from './components/StarshipList';
+import starshipService from './services/starshipService';
 import StarshipSearch from './components/StarshipSearch';
+import StarshipList from './components/StarshipList';
+import StarshipCard from './components/StarshipCard';
 
 const App = () => {
 

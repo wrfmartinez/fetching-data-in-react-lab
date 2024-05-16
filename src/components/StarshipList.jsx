@@ -1,7 +1,10 @@
-function StarshipList() {
+import StarshipSearch from "./StarshipSearch";
+
+const StarshipList = () => {
   return (
     <>
-      <h1>List</h1>
+      <ul>
+      </ul>
     </>
   )
 }

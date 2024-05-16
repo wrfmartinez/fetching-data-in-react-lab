@@ -1,8 +1,9 @@
-function StarshipCard() {
+const StarshipCard = () => {
   return (
-    <>
-      <h1>Card</h1>
-    </>
+    <div>
+      <h2>Ship name</h2>
+      <p>Ship data</p>
+    </div>
   )
 }
 
