@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const StarshipSearch = () => {
+const StarshipSearch = ({ onSearch, fetchStarships }) => {
   const [ searchResult, setSearchResult ] = useState('');
 
   const handleInputChange = (event) => {
@@ -9,7 +9,8 @@ const StarshipSearch = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setStarships('');
+    onSearch(searchResult);
+    setSearchResult('');
   }
 
   return (

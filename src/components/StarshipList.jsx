@@ -1,9 +1,12 @@
-import StarshipSearch from "./StarshipSearch";
+import StarshipCard from './StarshipCard';
 
-const StarshipList = () => {
+const StarshipList = ({ starships }) => {
   return (
     <>
       <ul>
+        {starships.map((starship, idx) => (
+          <StarshipCard key={idx} starship={starship} />
+        ))}
       </ul>
     </>
   )
