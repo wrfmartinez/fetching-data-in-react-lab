@@ -5,10 +5,13 @@ import StarshipList from './components/StarshipList';
 import StarshipCard from './components/StarshipCard';
 
 const App = () => {
+  const fetch = async () => {
+    const data = await starshipService.show('Death Star');
+  }
 
   return (
     <div>
-      <StarshipSearch />
+      <StarshipSearch fetch={fetch} />
       <StarshipList />
       <StarshipCard />
     </div>

@@ -1,20 +1,27 @@
 import { useState } from "react";
 
-const StarshipSearch = () => {
-  const [ starship, setStarship ] = useState({});
+const StarshipSearch = ({ fetch }) => {
+  const [ starships, setStarships ] = useState([]);
 
   const handleInputChange = (event) => {
-    setStarship(event.target.value);
+    setStarships(event.target.value);
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setStarship('');
+    starships.map((starship) => {
+      starship === fetch(starship.results.name) ? console.log(starship) : 'no data';
+    })
+    setStarships('');
   }
 
   return (
     <form onSubmit={handleSubmit}>
-      <input id="search" type="text" />
+      <input 
+        id="search" 
+        type="text" 
+        onChange={handleInputChange} 
+        />
       <button type="submit">Search</button>
     </form>
   )
